@@ -1,0 +1,16 @@
+@extends('front.layout.master')
+
+@section('meta-title', siteTitle(trans('front.title_pricing_info')))
+
+@section('content')
+
+    <h1>test</h1>
+
+   
+
+@stop
+
+
+@section('modals')
+    @include('front.pricing-info.partials.pricing-info-modals')
+@stop

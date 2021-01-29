@@ -1,0 +1,30 @@
+<?php
+/**
+ *
+ * This file is part of the software provided by AppsWWW <http://www.appswww.com>
+ *
+ * Reproduce, re-sell, distribute, sublicense, disclose, market,
+ * rent, lease or transfer the Licensed Software is not permitted
+ * by this Agreement
+ *
+ *
+ * For full copyright and license information, please visit
+ * http://www.appswww.com/license-agreement/
+ *
+ * @copyright (c) Laimonas Prei (l.preisas@gmail.com)
+ */
+
+class Feature extends Eloquent {
+
+	public $timestamps = false;
+	public $table = 'features';
+
+	protected $fillable = ['name', 'order', 'feature_group_id', 'active'];
+
+	//relationship
+
+	public function listings() {
+		return $this->belongsToMany('Listing');
+	}
+
+}
